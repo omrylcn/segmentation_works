@@ -104,7 +104,7 @@ def imageSegmentationGenerator(images_path,segs_path,batch_size,n_classes,
             x.append(de)
             y.append(getSegmentationArr(seg,n_classes,output_w,output_h))
         
-        yield np.array(x), np.array(y),im 
+        yield np.array(x), np.array(y)
         
 
 

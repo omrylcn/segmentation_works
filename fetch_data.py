@@ -10,7 +10,7 @@ if not os.path.exists(data_dir):
 #Train data
 image_zip_file_train = 'dataset1.zip'
 file_id_train = "0B0d9ZiqAgFkiOHR1NTJhWVJMNEU"
-destination_train = 'data.zip'
+destination_train = 'dataset1.zip'
 
 
 

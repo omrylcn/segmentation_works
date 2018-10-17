@@ -133,7 +133,7 @@ def FCN8(
     o = Conv2DTranspose( n_classes , kernel_size=(16,16) ,  strides=(8,8) , use_bias=False)(o)
 
     global o_shape
-    o_shape=Model(img_input,o).
+    o_shape=Model(img_input,o).output_shape
 
     o=Reshape((o_shape[1]*o_shape[2],n_classes))(o)
     o=Activation("softmax")(o)

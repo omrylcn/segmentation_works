@@ -132,7 +132,6 @@ def FCN8(
     o = Add()([ o2 , o ])
     o = Conv2DTranspose( n_classes , kernel_size=(16,16) ,  strides=(8,8) , use_bias=False)(o)
 
-    global o_shape
     o_shape=Model(img_input,o).output_shape
 
     o=Reshape((o_shape[1]*o_shape[2],n_classes))(o)
@@ -140,13 +139,13 @@ def FCN8(
 
     model=Model(img_input,o)
 
-    model.outputs=o_shape
+    
     
     if pretrained:
         get_model_weights()
         model.load_weights(path,by_name=True)
     
-    return model
+    return model,o_shape
 
 
 

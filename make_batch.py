@@ -44,8 +44,8 @@ def aug_data(image=None,segmentation=None,train=True):
         tim=image[::i1,::i2]
         tseg=segmentation[::i1,::i2]
 
-        tim=tim[k1*10:(100+k1*30),k2:(100+k2*k1)]
-        tseg=tseg[k1*10:(100+k1*30),k2:(100+k2*k1)]
+        tim=tim[k1*10:(200+k1*30),k2:(250+k2*k1)]
+        tseg=tseg[k1*10:(200+k1*30),k2:(250+k2*k1)]
         return tim,tseg
 
     else:

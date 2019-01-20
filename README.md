@@ -1,6 +1,6 @@
 # Segmentation-Works
 contains  segmentation models and works
-## Train Process
+## Train Part
 ![title](images/sample2.png)
 
 
